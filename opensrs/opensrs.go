@@ -43,7 +43,7 @@ type Client struct {
 	UserAgent string
 
 	// Services used for talking to different parts of the OpenSRS API.
-	Domains           *DomainsService
+	Domains *DomainsService
 
 	// Set to true to output debugging logs during API calls
 	Debug bool
@@ -165,7 +165,7 @@ func (c *Client) Do(req *http.Request, obj *OpsResponse) (*http.Response, error)
 // An ErrorResponse represents an API response that generated an error.
 type ErrorResponse struct {
 	HttpResponse *http.Response
-	OpsResponse *OpsResponse
+	OpsResponse  *OpsResponse
 
 	// human-readable message
 	Message string `json:"message"`

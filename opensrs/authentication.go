@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	httpHeaderUserName    = "X-UserName"
-	httpHeaderSignature   = "X-Signature"
+	httpHeaderUserName  = "X-UserName"
+	httpHeaderSignature = "X-Signature"
 )
 
 // Provides credentials that can be used for authenticating with OpenSRS.
@@ -21,7 +21,7 @@ type Credentials interface {
 // API key MD5 authentication
 type apiKeyMD5Credentials struct {
 	userName string
-	apiKey string
+	apiKey   string
 }
 
 // NewApiKeyMD5Credentials construct Credentials using the OpenSRS MD5 Api Key method.
